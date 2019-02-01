@@ -1,0 +1,16 @@
+description: Запис списка
+type: object
+required:
+  - id
+  - wbListId
+  - value
+properties:
+  id:
+    description: Идентификатор записи
+    type: string
+  wbListId:
+    description: Идентификатор списка
+    type: string
+  value:
+    description: Значения записи
+    type: string

@@ -58,6 +58,18 @@ parameters:
 
 tags:
 
-  - name: Fraudbusters Resources
-    x-displayName: Управление правилами antifraud
+  - name: Rules Management
+    x-displayName: Управление правилами
+    description: ""
+
+  - name: Template Management
+    x-displayName: Управление шаблонами
+    description: ""
+
+  - name: WbList Model
+    x-displayName: Управление списками
+    description: ""
+
+  - name: Working Model Management
+    x-displayName: Управление списками
     description: ""

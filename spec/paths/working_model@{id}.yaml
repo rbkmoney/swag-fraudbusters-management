@@ -30,7 +30,7 @@ get:
 
 delete:
   tags:
-    - Rules Management
+    - Working Model Management
   summary: Удалить рабочую модель
   operationId: deleteWorkingModel
   parameters:

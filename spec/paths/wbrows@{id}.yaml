@@ -1,0 +1,10 @@
+delete:
+  tags:
+    - WbRow Management
+  summary: Удалить запись из списка
+  operationId: deleteWbRow
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Запись удалена
