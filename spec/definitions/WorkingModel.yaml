@@ -1,0 +1,21 @@
+description: Модель применения правил
+type: object
+required:
+  - id
+  - name
+  - value
+properties:
+  id:
+    description: Идентификатор модели в системе
+    type: string
+  name:
+    description: Название модели в системе
+    type: string
+  globalTemplateId:
+    description: Идентификатор глобального шаблона в системе
+    type: string
+  merchantTemplates:
+    description: Список правил
+    type: array
+    items:
+      $ref: '#/definitions/MerchantTemplate'

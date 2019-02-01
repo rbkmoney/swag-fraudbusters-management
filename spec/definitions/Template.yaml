@@ -1,0 +1,18 @@
+description: Шаблон
+type: object
+required:
+  - id
+  - name
+  - value
+properties:
+  id:
+    description: Идентификатор шаблона в системе
+    type: string
+  name:
+    description: Название шаблона в системе
+    type: string
+  value:
+    description: Список правил
+    type: array
+    items:
+      $ref: '#/definitions/Rule'

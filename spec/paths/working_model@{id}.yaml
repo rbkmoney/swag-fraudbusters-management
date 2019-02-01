@@ -1,0 +1,40 @@
+put:
+  tags:
+    - Working Model Management
+  summary: Обновить рабочую модель
+  operationId: updateRule
+  parameters:
+    - $ref: '#/parameters/id'
+    - in: body
+      name: workingModel
+      description: Рабочая модель
+      required: true
+      schema:
+        $ref: '#/definitions/WorkingModel'
+  responses:
+    '200':
+      description: Правило успешно обновлено
+
+get:
+  tags:
+    - Working Model Management
+  summary: Достать рабочую модель по идентификатору
+  operationId: getWorkingModel
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Рабочая модель найдена
+      schema:
+        $ref: '#/definitions/WorkingModel'
+
+delete:
+  tags:
+    - Rules Management
+  summary: Удалить рабочую модель
+  operationId: deleteWorkingModel
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Рабочая модель удалено

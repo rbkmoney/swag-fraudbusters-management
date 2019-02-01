@@ -1,0 +1,17 @@
+post:
+  tags:
+    - Rules Management
+  summary: Проверить правило
+  operationId: validateRule
+  parameters:
+    - in: body
+      name: rule
+      description: Правило
+      required: true
+      schema:
+        $ref: '#/definitions/Rule'
+  responses:
+    '200':
+      description: Правило валидное
+    '400':
+      description: Ошибочные данные правила

@@ -1,0 +1,16 @@
+description: Шаблон для мерчанта
+type: object
+required:
+  - id
+  - name
+  - value
+properties:
+  partyId:
+    description: Идентификатор party
+    type: string
+  shopId:
+    description: Идентификатор магазина
+    type: string
+  template:
+    description: Список правил
+    $ref: '#/definitions/Template'

@@ -1,0 +1,15 @@
+post:
+  tags:
+    - Working Model Management
+  summary: Создать рабочую модель
+  operationId: createWorkingModel
+  parameters:
+    - in: body
+      name: rule
+      description: Рабочая модель
+      required: true
+      schema:
+        $ref: '#/definitions/WorkingModel'
+  responses:
+    '200':
+      description: Рабочая модель создана сохранено

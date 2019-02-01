@@ -1,0 +1,40 @@
+put:
+  tags:
+    - Template Management
+  summary: Обновить шаблон
+  operationId: updateTemplate
+  parameters:
+    - $ref: '#/parameters/id'
+    - in: body
+      name: rule
+      description: Шаблон
+      required: true
+      schema:
+        $ref: '#/definitions/Template'
+  responses:
+    '200':
+      description: Шаблон успешно обновлен
+
+get:
+  tags:
+    - Template Management
+  summary: Достать шаблон по идентификатору
+  operationId: getTemplate
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Шаблон найдено
+      schema:
+        $ref: '#/definitions/Template'
+
+delete:
+  tags:
+    - Template Management
+  summary: Удалить шаблон
+  operationId: deleteTemplate
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Шаблон удален
