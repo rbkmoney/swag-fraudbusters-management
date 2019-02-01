@@ -1,0 +1,25 @@
+delete:
+  tags:
+    - WbList Management
+  summary: Удалить список
+  operationId: deleteWbList
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Правило удалено
+
+get:
+  tags:
+    - WbList Management
+  summary: Достать пвсе записи списка
+  operationId: getWbRows
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: List of WbListRow
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/WbListRow'

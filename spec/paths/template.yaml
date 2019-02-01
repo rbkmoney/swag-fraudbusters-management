@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Template Management
+  summary: Создать шаблон
+  operationId: createTemplate
+  parameters:
+    - in: body
+      name: rule
+      description: Правило
+      required: true
+      schema:
+        $ref: '#/definitions/Template'
+  responses:
+    '200':
+      description: Правило сохранено
+
+get:
+  tags:
+    - Template Management
+  summary: Получить все шаблоны
+  operationId: getTemplates
+  responses:
+    '200':
+      description: List of template
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Template'

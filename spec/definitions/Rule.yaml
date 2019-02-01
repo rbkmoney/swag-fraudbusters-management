@@ -1,0 +1,16 @@
+description: Правило
+type: object
+required:
+  - id
+  - name
+  - value
+properties:
+  id:
+    description: Идентификатор правила в системе
+    type: string
+  name:
+    description: Название правила в системе
+    type: string
+  value:
+    description: Правило в текстовом формате
+    type: string

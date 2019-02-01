@@ -1,0 +1,40 @@
+put:
+  tags:
+    - Rules Management
+  summary: Обновить правило
+  operationId: updateRule
+  parameters:
+    - $ref: '#/parameters/id'
+    - in: body
+      name: rule
+      description: Правило
+      required: true
+      schema:
+        $ref: '#/definitions/Rule'
+  responses:
+    '200':
+      description: Правило успешно обновлено
+
+get:
+  tags:
+    - Rules Management
+  summary: Достать правило по идентификатору
+  operationId: getRule
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Правило найдено
+      schema:
+        $ref: '#/definitions/Rule'
+
+delete:
+  tags:
+    - Rules Management
+  summary: Удалить правило
+  operationId: deleteRule
+  parameters:
+    - $ref: '#/parameters/id'
+  responses:
+    '200':
+      description: Правило удалено

@@ -1,0 +1,28 @@
+post:
+  tags:
+    - Rules Management
+  summary: Создать правило
+  operationId: createRule
+  parameters:
+    - in: body
+      name: rule
+      description: Правило
+      required: true
+      schema:
+        $ref: '#/definitions/Rule'
+  responses:
+    '200':
+      description: Правило сохранено
+
+get:
+  tags:
+    - Rules Management
+  summary: Получить все правила
+  operationId: getRules
+  responses:
+    '200':
+      description: List of rules
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/Rule'

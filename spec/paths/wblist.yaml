@@ -1,0 +1,28 @@
+post:
+  tags:
+    - WbList Model Management
+  summary: Создать список
+  operationId: createWbList
+  parameters:
+    - in: body
+      name: rule
+      description: Список
+      required: true
+      schema:
+        $ref: '#/definitions/WbListModel'
+  responses:
+    '200':
+      description: Список создан
+
+get:
+  tags:
+    - WbList Model Management
+  summary: Получить все спсики
+  operationId: getTemplates
+  responses:
+    '200':
+      description: List of WbList
+      schema:
+        type: array
+        items:
+          $ref: '#/definitions/WbListModel'

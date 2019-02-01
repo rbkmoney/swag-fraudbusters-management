@@ -1,0 +1,15 @@
+post:
+  tags:
+    - WbList Row Management
+  summary: Создать запись в списке
+  operationId: createWbRow
+  parameters:
+    - in: body
+      name: wbRow
+      description: Запись в списке
+      required: true
+      schema:
+        $ref: '#/definitions/WbListRow'
+  responses:
+    '200':
+      description: Запись создана

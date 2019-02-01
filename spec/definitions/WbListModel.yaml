@@ -1,0 +1,37 @@
+description: Список
+type: object
+required:
+  - id
+  - name
+  - partyId
+  - type
+  - field
+properties:
+  id:
+    description: Идентификатор списка в системе
+    type: string
+  name:
+    description: Название списка в системе
+    type: string
+  partyId:
+    description: Идентификатор party
+    type: string
+  shopId:
+    description: Идентификатор магазина
+    type: string
+  type:
+    description: Тип списка
+    type: string
+    enum:
+      - black
+      - white
+  field:
+    description: Тип поля в списке
+    type: string
+    enum:
+      - ip
+      - partyId
+      - shopId
+      - email
+      - bin
+      - fingerprint
