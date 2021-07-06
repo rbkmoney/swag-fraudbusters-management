@@ -1,0 +1,6 @@
+delete:
+  summary: Test
+  operationId: test
+  tags:
+    - test
+

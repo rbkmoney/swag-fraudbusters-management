@@ -1,0 +1,12 @@
+description: Информация о мерчанте
+required:
+  - shopId
+  - partyId
+properties:
+  shopId:
+    description: Идентификатор магазина
+    type: string
+  partyId:
+    description: Идентификатор пати
+    type: string
+

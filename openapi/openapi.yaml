@@ -1,0 +1,136 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: RBKmoney Fraudbusters Management API
+  description:
+    $ref: './docs/api.md'
+  termsOfService: 'https://rbk.money/'
+  contact:
+    name: RBKmoney Support Team
+    email: support@rbk.money
+    url: 'https://developer.rbk.money'
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+security:
+  - bearer: []
+tags:
+  - name: error-codes
+    x-displayName: Коды ошибок
+    description:
+      $ref: './docs/error-codes.md'
+  - name: audit
+    x-displayName: Audit
+  - name: basic-error-controller
+    x-displayName: Basic Error Controller
+  - name: clickhouse-notificator-proxy-facade
+    x-displayName: Clickhouse Notificator Proxy Facade
+  - name: group-command-resource
+    x-displayName: Group Command Resource
+  - name: lists-resource
+    x-displayName: Lists Resource
+  - name: operation-handler
+    x-displayName: Operation Handler
+  - name: payment-emulate-resource
+    x-displayName: Payment Emulate Resource
+  - name: payment-group-query-resource
+    x-displayName: Payment Group Query Resource
+  - name: payment-load-data-resource
+    x-displayName: Payment Load Data Resource
+  - name: payment-template-command-resource
+    x-displayName: Payment Template Command Resource
+  - name: payment-template-query-resource
+    x-displayName: Payment Template Query Resource
+  - name: reference-query-resource
+    x-displayName: Reference Query Resource
+paths:
+  # Audit
+  /audit/commandTypes:
+    $ref: ./paths/audit/getCommandTypes.yaml
+  /audit/filter:
+    $ref: ./paths/audit/filterLogs.yaml
+  /audit/objectTypes:
+    $ref: ./paths/audit/getObjectTypes.yaml
+
+  # Notifications
+  /notification:
+    $ref: ./paths/notification/createOrUpdateNotification.yaml
+  /notification/{name}:
+    $ref: ./paths/notification/removeByName.yaml
+  /notification/validate:
+    $ref: ./paths/notification/validateNotification.yaml
+
+  # Notifications channel
+  /notification/channel/{name}:
+    $ref: ./paths/notification/channel/createChannel.yaml
+
+  # Load data
+  /load-data/fraud:
+    $ref: ./paths/load-data/loadFraudTransactions.yaml
+
+  # Groups
+  /group:
+    $ref: ./paths/group/insertGroup.yaml
+  /group/{groupId}:
+      $ref: ./paths/group/removeGroupById.yaml
+  /group/filter:
+    $ref: ./paths/group/filterGroups.yaml
+  /group?groupId={id}:
+      $ref: ./paths/group/getGroupById.yaml
+
+  # Groups reference
+  /group/{id}/reference:
+    $ref: ./paths/group/reference/insertGroupReference.yaml
+  /group/{id}/reference/remove:
+    $ref: ./paths/group/reference/removeGroupReferenceById.yaml
+  /group/reference/filter:
+    $ref: ./paths/group/reference/filterGroupsReferences.yaml
+  /group/{groupId}/reference:
+    $ref: ./paths/group/reference/getGroupReferencesByGroupId.yaml
+
+  # Lists
+  /lists:
+    $ref: ./paths/lists/insertRowToList.yaml
+  /lists/{id}:
+    $ref: ./paths/lists/removeRowFromListById.yaml
+  /lists/availableListNames:
+    $ref: ./paths/lists/getAvailableListNames.yaml
+  /lists/filter:
+    $ref: ./paths/lists/filterLists.yaml
+  /lists/names:
+    $ref: ./paths/lists/getListNames.yaml
+
+  # Templates
+  /template:
+    $ref: ./paths/template/insertTemplate.yaml
+  /template/{id}:
+    $ref: ./paths/template/removeTemplateById.yaml
+  /template/filter:
+    $ref: ./paths/template/filterTemplates.yaml
+  /template/names:
+    $ref: ./paths/template/getTemplateNames.yaml
+  /template/validate:
+    $ref: ./paths/template/validateTemplate.yaml
+
+  # References
+  /reference:
+    $ref: ./paths/reference/insertReferences.yaml # /template/references
+  /reference/{id}:
+    $ref: ./paths/reference/removeReferences.yaml # /template/{templateId}/reference/{id}
+  /reference/filter:
+    $ref: ./paths/reference/filterReferences.yaml
+
+  # Default references
+  /reference/default:
+    $ref: ./paths/reference/default/insertDefaultReference.yaml # /template/{id}/default
+  /reference/default/{id}:
+    $ref: ./paths/reference/default/removeDefaultReference.yaml # /template/{id}/default
+  /reference/default/filter:
+    $ref: ./paths/reference/default/filterDefaultReferences.yaml
+
+  # Emulation
+  /emulation:
+    $ref: ./paths/emulation/getTemplatesFlowByPartyAndShop.yaml # /rules
+
+servers:
+  - url: 'https://fb-management:8080/fb-management/v1'

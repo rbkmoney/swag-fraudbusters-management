@@ -1,0 +1,11 @@
+type: object
+required:
+  - result
+  - count
+properties:
+  count:
+    type: integer
+  result:
+    type: array
+    items:
+      $ref: '../../schemas/CommandAudit.yaml'

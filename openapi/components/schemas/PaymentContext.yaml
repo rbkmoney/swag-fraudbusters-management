@@ -1,0 +1,41 @@
+description: Контекст платежа
+required:
+  - cashInfo
+  - bankCard
+  - merchantInfo
+  - invoiceId
+  - paymentId
+  - payerType
+properties:
+  payerInfo:
+    $ref: './UserInfo.yaml'
+  cashInfo:
+    $ref: './CashInfo.yaml'
+  bankCard:
+    $ref: './BankCard.yaml'
+  merchantInfo:
+    $ref: './MerchantInfo.yaml'
+  mobile:
+    description: Признак мобильного платежа
+    type: boolean
+    default: false
+  recurrent:
+    description: Признак рекурентного платежа
+    type: boolean
+    default: false
+  invoiceId:
+    description: Идентификатор счета
+    type: string
+  paymentId:
+    description: Идентификатор платежа
+    type: string
+  payerType:
+    description: Тип плательщика
+    $ref: './PayerType.yaml'
+  tokenMobileProvider:
+    description: Провайдер предоставляющий токен для мобильного платежа
+    type: string
+  createdAt:
+    description: Дата и время создания
+    type: string
+    format: date-time

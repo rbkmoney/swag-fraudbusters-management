@@ -1,0 +1,32 @@
+description: Лог изменений в личном кабинете
+required:
+  - cardToken
+  - lastDigits
+  - bin
+properties:
+  commandType:
+    type: string
+    enum: ["CREATE", "DELETE"]
+  id:
+    type: integer
+  initiator:
+    type: string
+  insertTime:
+    type: string
+    format: date-time
+  object:
+    type: string
+  objectType:
+    type: string
+    enum": [
+        "template",
+        "reference",
+        "group_reference",
+        "group",
+        "p2p_group_reference",
+        "p2p_reference",
+        "black",
+        "white",
+        "grey",
+        "naming"
+    ]

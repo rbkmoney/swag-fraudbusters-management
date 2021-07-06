@@ -1,0 +1,65 @@
+get:
+  summary: Поиск логов аудита
+  operationId: filterLogs
+  tags:
+    - audit
+  required:
+    - commandTypes
+  parameters:
+    - name: commandTypes
+      type: array
+      in: query
+      items:
+        type: string
+    - name: objectTypes
+      type: array
+      in: query
+      items:
+        type: string
+    - name: from
+      type: string
+      in: query
+    - name: to
+      type: string
+      in: query
+    - name: lastId
+      type: string
+      in: query
+    - name: name
+      type: string
+      in: query
+    - name: searchValue
+      type: string
+      in: query
+    - name: sortBy
+      type: string
+      in: query
+    - name: sortFieldValue
+      type: string
+      in: query
+    - name: sortOrder
+      type: string
+      in: query
+      enum:
+      - ASC
+      - DESC
+      - DEFAULT
+    - name: size
+      type: int32
+      in: query
+
+  responses:
+    '201':
+      description: Audit logs
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/audit/FilterLogsResponse.yaml'
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+
+
