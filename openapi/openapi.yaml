@@ -13,7 +13,7 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 security:
-  - bearerAuth: []
+  - bearer: []
 tags:
   - name: error-codes
     x-displayName: Коды ошибок
@@ -69,8 +69,6 @@ paths:
       $ref: ./paths/group/removeGroupById.yaml
   /group/filter:
     $ref: ./paths/group/filterGroups.yaml
-  /group?groupId={id}:
-      $ref: ./paths/group/getGroupById.yaml
 
   # Groups reference
   /group/{id}/reference:
@@ -79,8 +77,6 @@ paths:
     $ref: ./paths/group/reference/removeGroupReferenceById.yaml
   /group/reference/filter:
     $ref: ./paths/group/reference/filterGroupsReferences.yaml
-  /group/{groupId}/reference:
-    $ref: ./paths/group/reference/getGroupReferencesByGroupId.yaml
 
   # Lists
   /lists:
@@ -128,46 +124,6 @@ servers:
   - url: 'https://fb-management:8080/fb-management/v1'
 
 components:
-  parameters:
-    sortOrder:
-      name: sortOrder
-      in: query
-      required: false
-      schema:
-        type: string
-        enum:
-          - ASC
-          - DESC
-          - DEFAULT
-    initiator:
-      name: initiator
-      in: query
-      required: true
-      schema:
-        type: string
-    searchValue:
-      name: searchValue
-      in: query
-      schema:
-        type: string
-    sortBy:
-      name: sortBy
-      in: query
-      schema:
-        type: string
-    sortFieldValue:
-      name: sortFieldValue
-      in: query
-      schema:
-        type: string
-    lastId:
-      name: lastId
-      in: query
-      schema:
-        type: string
-    size:
-      name: size
-      in: query
-      schema:
-        type: integer
-        format: int32
+  securitySchemes:
+    bearer:
+      $ref: './components/security-schemes/Bearer.yaml'

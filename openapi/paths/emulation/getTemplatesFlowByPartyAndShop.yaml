@@ -5,11 +5,13 @@ get:
     - emulation
   parameters:
     - name: partyId
-      type: string
       in: query
+      schema:
+        type: string
     - name: shopId
-      type: string
       in: query
+      schema:
+        type: string
 
   responses:
     '201':

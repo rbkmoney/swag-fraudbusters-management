@@ -10,10 +10,13 @@ post:
         schema:
           type: object
           properties:
-            file:
-              in: formData
-              required: true
-              type: file
+            orderId:
+              type: integer
+            userId:
+              type: integer
+            fileName:
+              type: string
+              format: binary
 
   responses:
     '201':

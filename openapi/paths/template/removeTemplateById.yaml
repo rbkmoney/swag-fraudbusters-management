@@ -5,8 +5,9 @@ delete:
     - template
   parameters:
     - name: id
-      type: string
-      in: query
+      in: path
+      schema:
+        type: string
 
   responses:
     '201':

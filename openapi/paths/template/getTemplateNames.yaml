@@ -5,8 +5,9 @@ get:
     - template
   parameters:
     - name: regexpName
-      type: string
       in: query
+      schema:
+        type: string
 
   responses:
     '201':

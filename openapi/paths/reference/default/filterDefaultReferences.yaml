@@ -4,12 +4,12 @@ get:
   tags:
     - reference
   parameters:
-    - $ref: "#/components/parameters/lastId"
-    - $ref: "#/components/parameters/sortOrder"
-    - $ref: "#/components/parameters/searchValue"
-    - $ref: "#/components/parameters/sortBy"
-    - $ref: "#/components/parameters/sortFieldValue"
-    - $ref: "#/components/parameters/size"
+    - $ref: "../../../components/parameters/lastId.yaml"
+    - $ref: "../../../components/parameters/sortOrder.yaml"
+    - $ref: "../../../components/parameters/searchValue.yaml"
+    - $ref: "../../../components/parameters/sortBy.yaml"
+    - $ref: "../../../components/parameters/sortFieldValue.yaml"
+    - $ref: "../../../components/parameters/size.yaml"
 
   responses:
     '201':

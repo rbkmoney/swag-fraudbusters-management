@@ -3,33 +3,34 @@ get:
   operationId: filterLogs
   tags:
     - audit
-  required:
-    - commandTypes
   parameters:
-    - $ref: "#/components/parameters/sortOrder"
-    - $ref: "#/components/parameters/searchValue"
-    - $ref: "#/components/parameters/sortBy"
-    - $ref: "#/components/parameters/sortFieldValue"
-    - $ref: "#/components/parameters/size"
+    - $ref: "../../components/parameters/lastId.yaml"
+    - $ref: "../../components/parameters/sortOrder.yaml"
+    - $ref: "../../components/parameters/searchValue.yaml"
+    - $ref: "../../components/parameters/sortBy.yaml"
+    - $ref: "../../components/parameters/sortFieldValue.yaml"
+    - $ref: "../../components/parameters/size.yaml"
     - name: commandTypes
-      type: array
       in: query
-      items:
-        type: string
+      required: true
+      schema:
+        type: array
+        items:
+          type: string
     - name: objectTypes
-      type: array
       in: query
-      items:
-        type: string
+      schema:
+        type: array
+        items:
+          type: string
     - name: from
-      type: string
       in: query
+      schema:
+        type: string
     - name: to
-      type: string
       in: query
-    - name: lastId
-      type: string
-      in: query
+      schema:
+        type: string
 
   responses:
     '201':

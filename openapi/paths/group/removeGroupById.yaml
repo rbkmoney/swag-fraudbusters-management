@@ -5,8 +5,9 @@ delete:
     - group
   parameters:
     - name: groupId
-      type: string
-      in: query
+      in: path
+      schema:
+        type: string
 
   responses:
     '201':

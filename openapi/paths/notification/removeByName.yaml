@@ -5,8 +5,9 @@ delete:
     - notification
   parameters:
     - name: name
-      type: string
-      in: query
+      in: path
+      schema:
+        type: string
 
   responses:
     '200':

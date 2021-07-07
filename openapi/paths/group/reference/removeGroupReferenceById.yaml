@@ -5,18 +5,22 @@ delete:
     - group-reference
   parameters:
     - name: id
-      type: string
       required: true
       in: path
+      schema:
+        type: string
     - name: groupId
-      type: string
       in: query
+      schema:
+        type: string
     - name: partyId
-      type: string
       in: query
+      schema:
+        type: string
     - name: shopId
-      type: string
       in: query
+      schema:
+        type: string
 
   responses:
     '201':

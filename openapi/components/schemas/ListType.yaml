@@ -1,4 +1,3 @@
-name: listType
 type: string
 enum:
   - black

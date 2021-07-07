@@ -3,18 +3,13 @@ get:
   operationId: filterGroupsReferences
   tags:
     - group-reference
-  required:
-    - groupId
-    - name
   parameters:
-    - $ref: "#/components/parameters/sortOrder"
-    - $ref: "#/components/parameters/searchValue"
-    - $ref: "#/components/parameters/sortBy"
-    - $ref: "#/components/parameters/sortFieldValue"
-    - $ref: "#/components/parameters/size"
-    - name: lastId
-      type: string
-      in: query
+    - $ref: "../../../components/parameters/sortOrder.yaml"
+    - $ref: "../../../components/parameters/searchValue.yaml"
+    - $ref: "../../../components/parameters/sortBy.yaml"
+    - $ref: "../../../components/parameters/sortFieldValue.yaml"
+    - $ref: "../../../components/parameters/size.yaml"
+    - $ref: "../../../components/parameters/lastId.yaml"
 
   responses:
     '201':

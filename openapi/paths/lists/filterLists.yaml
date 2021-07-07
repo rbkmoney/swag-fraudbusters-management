@@ -4,26 +4,28 @@ get:
   tags:
     - lists
   parameters:
-    - $ref: "#/components/parameters/sortOrder"
-    - $ref: "#/components/parameters/searchValue"
-    - $ref: "#/components/parameters/sortBy"
-    - $ref: "#/components/parameters/sortFieldValue"
-    - $ref: "#/components/parameters/size"
+    - $ref: "../../components/parameters/sortOrder.yaml"
+    - $ref: "../../components/parameters/searchValue.yaml"
+    - $ref: "../../components/parameters/sortBy.yaml"
+    - $ref: "../../components/parameters/sortFieldValue.yaml"
+    - $ref: "../../components/parameters/size.yaml"
 
     - name: listNames
-      type: array
       in: query
-      items:
-        type: string
+      schema:
+        type: array
+        items:
+          type: string
 
     - name: listType
-      type: array
       in: query
-      enum:
-        - white
-        - black
-        - grey
-        - naming
+      schema:
+        type: string
+        enum:
+          - white
+          - black
+          - grey
+          - naming
 
   responses:
     '201':

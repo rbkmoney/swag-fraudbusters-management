@@ -5,9 +5,10 @@ post:
     - group-reference
   parameters:
     - name: id
-      type: string
       required: true
       in: path
+      schema:
+        type: string
 
   requestBody:
     content:
