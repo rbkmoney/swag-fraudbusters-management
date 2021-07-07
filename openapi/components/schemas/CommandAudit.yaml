@@ -6,7 +6,9 @@ required:
 properties:
   commandType:
     type: string
-    enum: ["CREATE", "DELETE"]
+    enum:
+    - CREATE
+    - DELETE
   id:
     type: integer
   initiator:
@@ -18,15 +20,12 @@ properties:
     type: string
   objectType:
     type: string
-    enum": [
-        "template",
-        "reference",
-        "group_reference",
-        "group",
-        "p2p_group_reference",
-        "p2p_reference",
-        "black",
-        "white",
-        "grey",
-        "naming"
-    ]
+    enum:
+    - template
+    - reference
+    - group_reference
+    - group
+    - black
+    - white
+    - grey
+    - naming

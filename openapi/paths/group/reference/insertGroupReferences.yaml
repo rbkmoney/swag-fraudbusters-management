@@ -1,14 +1,21 @@
 post:
-  summary: Создание группы
-  operationId: insertGroup
+  summary: Привязка группы к магазинам
+  operationId: insertGroupReferences
   tags:
-    - group
+    - group-reference
+  parameters:
+    - name: id
+      type: string
+      required: true
+      in: path
 
   requestBody:
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/GroupModel.yaml'
+          type: array
+          items:
+            $ref: '../../../components/schemas/GroupReferenceModel.yaml'
 
   responses:
     '201':

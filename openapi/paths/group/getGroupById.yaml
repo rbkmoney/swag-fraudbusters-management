@@ -1,6 +1,25 @@
-post:
-  summary: Test
-  operationId: test
+get:
+  summary: Поиск группы
+  operationId: getGroupById
   tags:
-    - test
+    - group
+  parameters:
+    - name: groupId
+      type: string
+      in: query
+
+  responses:
+    '201':
+      description: Group model
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/GroupModel.yaml'
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+
 

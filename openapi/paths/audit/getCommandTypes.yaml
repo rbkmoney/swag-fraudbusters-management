@@ -3,10 +3,6 @@ get:
   operationId: getCommandTypes
   tags:
     - audit
-  parameters:
-    - name: id
-      type: string
-      in: query
 
   responses:
     '201':
@@ -14,7 +10,7 @@ get:
       content:
         application/json:
             schema:
-              $ref: '../../components/responses/audit/ListResponse.yaml'
+              $ref: '../../components/responses/ListResponse.yaml'
     '401':
       description: Unauthorized
     '403':

@@ -1,0 +1,10 @@
+type: object
+properties:
+  id:
+    type: string
+  lastUpdateDate:
+    type: string
+  modifiedByUser:
+    type: string
+  template:
+    type: string

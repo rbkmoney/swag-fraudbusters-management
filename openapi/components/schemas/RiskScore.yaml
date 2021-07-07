@@ -1,6 +1,0 @@
-type: string
-enum:
-  - 'low'
-  - 'high'
-  - 'fatal'
-default: 'high'

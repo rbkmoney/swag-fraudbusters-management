@@ -6,6 +6,11 @@ get:
   required:
     - commandTypes
   parameters:
+    - $ref: "#/components/parameters/sortOrder"
+    - $ref: "#/components/parameters/searchValue"
+    - $ref: "#/components/parameters/sortBy"
+    - $ref: "#/components/parameters/sortFieldValue"
+    - $ref: "#/components/parameters/size"
     - name: commandTypes
       type: array
       in: query
@@ -24,28 +29,6 @@ get:
       in: query
     - name: lastId
       type: string
-      in: query
-    - name: name
-      type: string
-      in: query
-    - name: searchValue
-      type: string
-      in: query
-    - name: sortBy
-      type: string
-      in: query
-    - name: sortFieldValue
-      type: string
-      in: query
-    - name: sortOrder
-      type: string
-      in: query
-      enum:
-      - ASC
-      - DESC
-      - DEFAULT
-    - name: size
-      type: int32
       in: query
 
   responses:

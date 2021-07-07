@@ -1,6 +1,0 @@
-post:
-  summary: Test
-  operationId: test
-  tags:
-    - test
-

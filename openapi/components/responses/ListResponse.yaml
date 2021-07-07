@@ -3,4 +3,4 @@ required:
   - result
 properties:
   result:
-    $ref: '../../schemas/ArrayResult.yaml'
+    $ref: '../schemas/ArrayResult.yaml'

@@ -1,0 +1,6 @@
+name: sortOrder
+type: string
+enum:
+  - ASC
+  - DESC
+  - DEFAULT

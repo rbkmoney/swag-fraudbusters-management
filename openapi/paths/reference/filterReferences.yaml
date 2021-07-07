@@ -1,6 +1,28 @@
-post:
-  summary: Test
-  operationId: test
+get:
+  summary: Поиск по привязкам
+  operationId: filterReferences
   tags:
-    - test
+    - reference
+  parameters:
+    - $ref: "#/components/parameters/lastId"
+    - $ref: "#/components/parameters/sortOrder"
+    - $ref: "#/components/parameters/searchValue"
+    - $ref: "#/components/parameters/sortBy"
+    - $ref: "#/components/parameters/sortFieldValue"
+    - $ref: "#/components/parameters/size"
+
+  responses:
+    '201':
+      description: Groups models
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/FilterReferencesResponse.yaml'
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+
 

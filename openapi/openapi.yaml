@@ -13,7 +13,7 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 security:
-  - bearer: []
+  - bearerAuth: []
 tags:
   - name: error-codes
     x-displayName: Коды ошибок
@@ -21,28 +21,22 @@ tags:
       $ref: './docs/error-codes.md'
   - name: audit
     x-displayName: Audit
-  - name: basic-error-controller
-    x-displayName: Basic Error Controller
-  - name: clickhouse-notificator-proxy-facade
-    x-displayName: Clickhouse Notificator Proxy Facade
-  - name: group-command-resource
-    x-displayName: Group Command Resource
-  - name: lists-resource
-    x-displayName: Lists Resource
-  - name: operation-handler
-    x-displayName: Operation Handler
-  - name: payment-emulate-resource
-    x-displayName: Payment Emulate Resource
-  - name: payment-group-query-resource
-    x-displayName: Payment Group Query Resource
-  - name: payment-load-data-resource
-    x-displayName: Payment Load Data Resource
-  - name: payment-template-command-resource
-    x-displayName: Payment Template Command Resource
-  - name: payment-template-query-resource
-    x-displayName: Payment Template Query Resource
-  - name: reference-query-resource
-    x-displayName: Reference Query Resource
+  - name: notification
+    x-displayName: Notifications
+  - name: group
+    x-displayName: Groups
+  - name: group-reference
+    x-displayName: Groups reference
+  - name: lists
+    x-displayName: Lists
+  - name: emulation
+    x-displayName: Emulation
+  - name: load-data
+    x-displayName: Load data
+  - name: template
+    x-displayName: Templates
+  - name: reference
+    x-displayName: References
 paths:
   # Audit
   /audit/commandTypes:
@@ -80,7 +74,7 @@ paths:
 
   # Groups reference
   /group/{id}/reference:
-    $ref: ./paths/group/reference/insertGroupReference.yaml
+    $ref: ./paths/group/reference/insertGroupReferences.yaml
   /group/{id}/reference/remove:
     $ref: ./paths/group/reference/removeGroupReferenceById.yaml
   /group/reference/filter:
@@ -97,8 +91,6 @@ paths:
     $ref: ./paths/lists/getAvailableListNames.yaml
   /lists/filter:
     $ref: ./paths/lists/filterLists.yaml
-  /lists/names:
-    $ref: ./paths/lists/getListNames.yaml
 
   # Templates
   /template:
@@ -134,3 +126,48 @@ paths:
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
+
+components:
+  parameters:
+    sortOrder:
+      name: sortOrder
+      in: query
+      required: false
+      schema:
+        type: string
+        enum:
+          - ASC
+          - DESC
+          - DEFAULT
+    initiator:
+      name: initiator
+      in: query
+      required: true
+      schema:
+        type: string
+    searchValue:
+      name: searchValue
+      in: query
+      schema:
+        type: string
+    sortBy:
+      name: sortBy
+      in: query
+      schema:
+        type: string
+    sortFieldValue:
+      name: sortFieldValue
+      in: query
+      schema:
+        type: string
+    lastId:
+      name: lastId
+      in: query
+      schema:
+        type: string
+    size:
+      name: size
+      in: query
+      schema:
+        type: integer
+        format: int32

@@ -1,8 +1,0 @@
-description: Информацмя о клиенте
-properties:
-  ip:
-    type: string
-  email:
-    type: string
-  fingerprint:
-    type: string
