@@ -16,7 +16,7 @@ post:
         schema:
           type: array
           items:
-            $ref: '../../../components/schemas/GroupReferenceModel.yaml'
+            $ref: '../../../components/schemas/GroupReference.yaml'
 
   responses:
     '201':

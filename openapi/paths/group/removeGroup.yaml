@@ -1,6 +1,6 @@
 delete:
   summary: Удаление группы
-  operationId: removeGroupById
+  operationId: removeGroup
   tags:
     - group
   parameters:

@@ -7,4 +7,4 @@ properties:
   priorityTemplates:
     type: array
     items:
-      $ref: './PriorityIdModel.yaml'
+      $ref: './PriorityId.yaml'

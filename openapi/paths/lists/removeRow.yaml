@@ -1,9 +1,8 @@
 delete:
-  summary: Удаление привязки
-  operationId: removeReferences
+  summary: Удаление записи из списка
+  operationId: removeRow
   tags:
-    - reference
-
+    - lists
   parameters:
     - name: id
       required: true
@@ -13,7 +12,7 @@ delete:
 
   responses:
     '201':
-      description: Removed reference
+      description: Removed row from list
       content:
         application/json:
           schema:

@@ -35,7 +35,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/FilterGroupsResponse.yaml'
+            $ref: '../../components/responses/GroupsResponse.yaml'
     '401':
       description: Unauthorized
     '403':

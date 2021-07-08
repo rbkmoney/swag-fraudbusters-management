@@ -17,7 +17,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/FilterReferencesResponse.yaml'
+            $ref: '../../components/responses/ReferencesResponse.yaml'
     '401':
       description: Unauthorized
     '403':

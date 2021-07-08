@@ -1,6 +1,6 @@
 delete:
   summary: Удаление темплейта
-  operationId: removeTemplateById
+  operationId: removeTemplate
   tags:
     - template
   parameters:

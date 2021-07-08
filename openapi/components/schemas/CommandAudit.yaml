@@ -1,8 +1,4 @@
 description: Лог изменений в личном кабинете
-required:
-  - cardToken
-  - lastDigits
-  - bin
 properties:
   commandType:
     type: string

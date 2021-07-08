@@ -8,4 +8,4 @@ properties:
   result:
     type: array
     items:
-      $ref: '../schemas/TemplateModel.yaml'
+      $ref: '../schemas/Template.yaml'

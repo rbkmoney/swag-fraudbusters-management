@@ -6,4 +6,4 @@ properties:
   result:
     type: array
     items:
-      $ref: '../schemas/PaymentReferenceModel.yaml'
+      $ref: '../schemas/PaymentReference.yaml'

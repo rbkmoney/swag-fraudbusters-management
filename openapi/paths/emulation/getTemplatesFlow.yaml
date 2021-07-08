@@ -1,6 +1,6 @@
 get:
   summary: Список исполняемых темплейтов в порядке выполнения
-  operationId: getTemplatesFlowByPartyAndShop
+  operationId: getTemplatesFlow
   tags:
     - emulation
   parameters:

@@ -10,7 +10,7 @@ post:
         schema:
           type: array
           items:
-            $ref: '../../components/schemas/PaymentReferenceModel.yaml'
+            $ref: '../../components/schemas/PaymentReference.yaml'
 
   responses:
     '201':

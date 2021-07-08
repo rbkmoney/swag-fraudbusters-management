@@ -3,5 +3,5 @@ properties:
   validateResults:
     type: array
     items:
-      $ref: '../schemas/ErrorTemplateModel.yaml'
+      $ref: '../schemas/ErrorTemplate.yaml'
 

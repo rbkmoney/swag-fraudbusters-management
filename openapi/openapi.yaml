@@ -68,7 +68,7 @@ paths:
   /group:
     $ref: ./paths/group/insertGroup.yaml
   /group/{groupId}:
-      $ref: ./paths/group/removeGroupById.yaml
+      $ref: ./paths/group/removeGroup.yaml
   /group/filter:
     $ref: ./paths/group/filterGroups.yaml
 
@@ -76,15 +76,15 @@ paths:
   /group/{id}/reference:
     $ref: ./paths/group/reference/insertGroupReferences.yaml
   /group/{id}/reference/remove:
-    $ref: ./paths/group/reference/removeGroupReferenceById.yaml
+    $ref: ./paths/group/reference/removeGroupReference.yaml
   /group/reference/filter:
     $ref: ./paths/group/reference/filterGroupsReferences.yaml
 
   # Lists
   /lists:
-    $ref: ./paths/lists/insertRowToList.yaml
+    $ref: ./paths/lists/insertRow.yaml
   /lists/{id}:
-    $ref: ./paths/lists/removeRowFromListById.yaml
+    $ref: ./paths/lists/removeRow.yaml
   /lists/availableListNames:
     $ref: ./paths/lists/getAvailableListNames.yaml
   /lists/filter:
@@ -94,7 +94,7 @@ paths:
   /template:
     $ref: ./paths/template/insertTemplate.yaml
   /template/{id}:
-    $ref: ./paths/template/removeTemplateById.yaml
+    $ref: ./paths/template/removeTemplate.yaml
   /template/filter:
     $ref: ./paths/template/filterTemplates.yaml
   /template/names:
@@ -106,7 +106,7 @@ paths:
   /reference:
     $ref: ./paths/reference/insertReferences.yaml # /template/references
   /reference/{id}:
-    $ref: ./paths/reference/removeReferences.yaml # /template/{templateId}/reference/{id}
+    $ref: ./paths/reference/removeReference.yaml # /template/{templateId}/reference/{id}
   /reference/filter:
     $ref: ./paths/reference/filterReferences.yaml
 
@@ -120,7 +120,7 @@ paths:
 
   # Emulation
   /emulation:
-    $ref: ./paths/emulation/getTemplatesFlowByPartyAndShop.yaml # /rules
+    $ref: ./paths/emulation/getTemplatesFlow.yaml # /rules
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'

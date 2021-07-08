@@ -1,6 +1,6 @@
 delete:
   summary: Удаление ссылки на группу
-  operationId: removeGroupReferenceById
+  operationId: removeGroupReference
   tags:
     - group-reference
   parameters:

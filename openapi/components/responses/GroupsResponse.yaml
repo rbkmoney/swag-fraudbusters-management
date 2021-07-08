@@ -5,4 +5,4 @@ properties:
   result:
     type: array
     items:
-      $ref: '../schemas/GroupReferenceModel.yaml'
+      $ref: '../schemas/Group.yaml'
