@@ -67,6 +67,8 @@ paths:
       $ref: ./paths/group/removeGroup.yaml
   /group/filter:
     $ref: ./paths/group/filterGroups.yaml
+  /group/{id}:
+    $ref: ./paths/group/getGroup.yaml
 
   # Groups reference
   /group/{id}/reference:
