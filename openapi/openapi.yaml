@@ -15,10 +15,6 @@ info:
 security:
   - bearer: []
 tags:
-  - name: error-codes
-    x-displayName: Коды ошибок
-    description:
-      $ref: './docs/error-codes.md'
   - name: audit
     x-displayName: Audit
   - name: notification
