@@ -1,11 +1,12 @@
 delete:
   summary: Удалить нотификацию
-  operationId: removeByName
+  operationId: removeNotification
   tags:
     - notification
   parameters:
     - name: name
       in: path
+      required: true
       schema:
         type: string
 

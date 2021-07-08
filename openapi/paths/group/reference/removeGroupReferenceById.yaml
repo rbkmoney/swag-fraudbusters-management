@@ -14,10 +14,12 @@ delete:
       schema:
         type: string
     - name: partyId
+      required: true
       in: query
       schema:
         type: string
     - name: shopId
+      required: true
       in: query
       schema:
         type: string

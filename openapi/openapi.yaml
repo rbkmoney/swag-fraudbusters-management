@@ -50,13 +50,15 @@ paths:
   /notification:
     $ref: ./paths/notification/createOrUpdateNotification.yaml
   /notification/{name}:
-    $ref: ./paths/notification/removeByName.yaml
+    $ref: ./paths/notification/removeNotification.yaml
   /notification/validate:
     $ref: ./paths/notification/validateNotification.yaml
 
   # Notifications channel
-  /notification/channel/{name}:
+  /notification/channel:
     $ref: ./paths/notification/channel/createChannel.yaml
+  /notification/channel/{name}:
+    $ref: ./paths/notification/channel/removeChannel.yaml
 
   # Load data
   /load-data/fraud:

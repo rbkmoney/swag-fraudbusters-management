@@ -3,11 +3,13 @@ post:
   operationId: createOrUpdateNotification
   tags:
     - notification
+
   requestBody:
     content:
       application/json:
         schema:
           $ref: '../../components/schemas/Notification.yaml'
+
   responses:
     '201':
       description: Created row in list

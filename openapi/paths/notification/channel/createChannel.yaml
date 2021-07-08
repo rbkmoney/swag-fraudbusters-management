@@ -3,11 +3,6 @@ post:
   operationId: createChannel
   tags:
     - notification
-  parameters:
-    - name: name
-      in: path
-      schema:
-        type: string
   requestBody:
     content:
       application/json:
