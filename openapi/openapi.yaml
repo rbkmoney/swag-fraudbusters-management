@@ -123,7 +123,7 @@ paths:
     $ref: ./paths/payments/emulations/getTemplatesFlow.yaml
 
   # Historical data
-  /payments/historical-data/payments/filter:
+  /payments/historical-data/payments:
     $ref: ./paths/payments/historical-data/filterPayments.yaml
 
 servers:
