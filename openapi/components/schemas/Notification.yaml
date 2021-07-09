@@ -1,0 +1,32 @@
+type: object
+properties:
+  alertchanel:
+    type: string
+  createdAt:
+    type: string
+    format: date-time
+  frequency:
+    type: string
+  groupbyparams:
+    type: string
+  name:
+    type: string
+  period:
+    type: string
+  queryText:
+    type: string
+  status:
+    type: string
+    enum:
+      - CREATED
+      - ACTIVE
+      - ARCHIVE
+  subject:
+    type: string
+  templateType:
+    type: string
+  templateValue:
+    type: string
+  updatedAt:
+    type: string
+    format: date-time

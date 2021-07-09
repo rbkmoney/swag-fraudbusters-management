@@ -1,0 +1,135 @@
+openapi: 3.0.3
+info:
+  version: 1.0.0
+  title: RBKmoney Fraudbusters Management API
+  description:
+    $ref: './docs/api.md'
+  termsOfService: 'https://rbk.money/'
+  contact:
+    name: RBKmoney Support Team
+    email: support@rbk.money
+    url: 'https://developer.rbk.money'
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+security:
+  - bearer: []
+tags:
+  - name: audit
+    x-displayName: Audit
+  - name: notification
+    x-displayName: Notifications
+  - name: group
+    x-displayName: Groups
+  - name: group-reference
+    x-displayName: Groups reference
+  - name: lists
+    x-displayName: Lists
+  - name: emulation
+    x-displayName: Emulation
+  - name: load-data
+    x-displayName: Load data
+  - name: template
+    x-displayName: Templates
+  - name: reference
+    x-displayName: References
+  - name: historical-data
+    x-displayName: Historical data
+paths:
+  # Audit
+  /audit/commandTypes:
+    $ref: ./paths/audit/getCommandTypes.yaml
+  /audit/filter:
+    $ref: ./paths/audit/filterLogs.yaml
+  /audit/objectTypes:
+    $ref: ./paths/audit/getObjectTypes.yaml
+
+  # Notifications
+  /notifications:
+    $ref: ./paths/notifications/createOrUpdateNotification.yaml
+  /notifications/{name}:
+    $ref: ./paths/notifications/removeNotification.yaml
+  /notifications/validate:
+    $ref: ./paths/notifications/validateNotification.yaml
+
+  # Notifications channel
+  /notifications/channels:
+    $ref: ./paths/notifications/channels/createChannel.yaml
+  /notifications/channels/{name}:
+    $ref: ./paths/notifications/channels/removeChannel.yaml
+
+  # Load data
+  /payments/load-data/fraud-payments:
+    $ref: ./paths/payments/load-data/loadFraudPayments.yaml
+
+  # Groups
+  /payments/groups:
+    $ref: ./paths/payments/groups/insertGroup.yaml
+  /payments/groups/{groupId}:
+    $ref: ./paths/payments/groups/removeGroup.yaml
+  /payments/groups/filter:
+    $ref: ./paths/payments/groups/filterGroups.yaml
+  /payments/groups/{id}:
+    $ref: ./paths/payments/groups/getGroup.yaml
+
+  # Groups reference
+  /payments/groups/{id}/references:
+    $ref: ./paths/payments/groups/references/insertGroupReferences.yaml
+  /payments/groups/{id}/references/remove:
+    $ref: ./paths/payments/groups/references/removeGroupReference.yaml
+  /payments/groups/references/filter:
+    $ref: ./paths/payments/groups/references/filterGroupsReferences.yaml
+
+  # Lists
+  /payments/lists:
+    $ref: ./paths/payments/lists/insertRow.yaml
+  /payments/lists/{id}:
+    $ref: ./paths/payments/lists/removeRow.yaml
+  /payments/lists/availableListNames:
+    $ref: ./paths/payments/lists/getAvailableListNames.yaml
+  /payments/lists/filter:
+    $ref: ./paths/payments/lists/filterLists.yaml
+
+  # Templates
+  /payments/templates:
+    $ref: ./paths/payments/templates/insertTemplate.yaml
+  /payments/templates/{id}:
+    $ref: ./paths/payments/templates/removeTemplate.yaml
+  /payments/templates/filter:
+    $ref: ./paths/payments/templates/filterTemplates.yaml
+  /payments/templates/names:
+    $ref: ./paths/payments/templates/getTemplateNames.yaml
+  /payments/templates/validate:
+    $ref: ./paths/payments/templates/validateTemplate.yaml
+
+  # References
+  /payments/references:
+    $ref: ./paths/payments/references/insertReferences.yaml
+  /payments/references/{id}:
+    $ref: ./paths/payments/references/removeReference.yaml
+  /payments/references/filter:
+    $ref: ./paths/payments/references/filterReferences.yaml
+
+  # Default references
+  /payments/references/default:
+    $ref: ./paths/payments/references/default/insertDefaultReference.yaml
+  /payments/references/default/{id}:
+    $ref: ./paths/payments/references/default/removeDefaultReference.yaml
+  /payments/references/default/filter:
+    $ref: ./paths/payments/references/default/filterDefaultReferences.yaml
+
+  # Emulation
+  /payments/emulations:
+    $ref: ./paths/payments/emulations/getTemplatesFlow.yaml
+
+  # Historical data
+  /payments/historical-data/payments-info:
+    $ref: ./paths/payments/historical-data/filterPaymentsInfo.yaml
+
+servers:
+  - url: 'https://fb-management:8080/fb-management/v1'
+
+components:
+  securitySchemes:
+    bearer:
+      $ref: './components/security-schemes/Bearer.yaml'
