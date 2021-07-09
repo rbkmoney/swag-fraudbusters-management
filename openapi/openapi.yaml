@@ -43,82 +43,82 @@ paths:
     $ref: ./paths/audit/getObjectTypes.yaml
 
   # Notifications
-  /notification:
-    $ref: ./paths/notification/createOrUpdateNotification.yaml
-  /notification/{name}:
-    $ref: ./paths/notification/removeNotification.yaml
-  /notification/validate:
-    $ref: ./paths/notification/validateNotification.yaml
+  /notifications:
+    $ref: ./paths/notifications/createOrUpdateNotification.yaml
+  /notifications/{name}:
+    $ref: ./paths/notifications/removeNotification.yaml
+  /notifications/validate:
+    $ref: ./paths/notifications/validateNotification.yaml
 
   # Notifications channel
-  /notification/channel:
-    $ref: ./paths/notification/channel/createChannel.yaml
-  /notification/channel/{name}:
-    $ref: ./paths/notification/channel/removeChannel.yaml
+  /notifications/channels:
+    $ref: ./paths/notifications/channels/createChannel.yaml
+  /notifications/channels/{name}:
+    $ref: ./paths/notifications/channels/removeChannel.yaml
 
   # Load data
-  /payment/load-data/fraud:
-    $ref: ./paths/payment/load-data/loadFraudTransactions.yaml
+  /payments/load-data/fraud-payments:
+    $ref: ./paths/payments/load-data/loadFraudPayments.yaml
 
   # Groups
-  /payment/group:
-    $ref: ./paths/payment/group/insertGroup.yaml
-  /payment/group/{groupId}:
-      $ref: ./paths/payment/group/removeGroup.yaml
-  /payment/group/filter:
-    $ref: ./paths/payment/group/filterGroups.yaml
-  /payment/group/{id}:
-    $ref: ./paths/payment/group/getGroup.yaml
+  /payments/groups:
+    $ref: ./paths/payments/groups/insertGroup.yaml
+  /payments/groups/{groupId}:
+    $ref: ./paths/payments/groups/removeGroup.yaml
+  /payments/groups/filter:
+    $ref: ./paths/payments/groups/filterGroups.yaml
+  /payments/groups/{id}:
+    $ref: ./paths/payments/groups/getGroup.yaml
 
   # Groups reference
-  /payment/group/{id}/reference:
-    $ref: ./paths/payment/group/reference/insertGroupReferences.yaml
-  /payment/group/{id}/reference/remove:
-    $ref: ./paths/payment/group/reference/removeGroupReference.yaml
-  /payment/group/reference/filter:
-    $ref: ./paths/payment/group/reference/filterGroupsReferences.yaml
+  /payments/groups/{id}/references:
+    $ref: ./paths/payments/groups/references/insertGroupReferences.yaml
+  /payments/groups/{id}/references/remove:
+    $ref: ./paths/payments/groups/references/removeGroupReference.yaml
+  /payments/groups/references/filter:
+    $ref: ./paths/payments/groups/references/filterGroupsReferences.yaml
 
   # Lists
-  /payment/lists:
-    $ref: ./paths/payment/lists/insertRow.yaml
-  /payment/lists/{id}:
-    $ref: ./paths/payment/lists/removeRow.yaml
-  /payment/lists/availableListNames:
-    $ref: ./paths/payment/lists/getAvailableListNames.yaml
-  /payment/lists/filter:
-    $ref: ./paths/payment/lists/filterLists.yaml
+  /payments/lists:
+    $ref: ./paths/payments/lists/insertRow.yaml
+  /payments/lists/{id}:
+    $ref: ./paths/payments/lists/removeRow.yaml
+  /payments/lists/availableListNames:
+    $ref: ./paths/payments/lists/getAvailableListNames.yaml
+  /payments/lists/filter:
+    $ref: ./paths/payments/lists/filterLists.yaml
 
   # Templates
-  /payment/template:
-    $ref: ./paths/payment/template/insertTemplate.yaml
-  /payment/template/{id}:
-    $ref: ./paths/payment/template/removeTemplate.yaml
-  /payment/template/filter:
-    $ref: ./paths/payment/template/filterTemplates.yaml
-  /payment/template/names:
-    $ref: ./paths/payment/template/getTemplateNames.yaml
-  /payment/template/validate:
-    $ref: ./paths/payment/template/validateTemplate.yaml
+  /payments/templates:
+    $ref: ./paths/payments/templates/insertTemplate.yaml
+  /payments/templates/{id}:
+    $ref: ./paths/payments/templates/removeTemplate.yaml
+  /payments/templates/filter:
+    $ref: ./paths/payments/templates/filterTemplates.yaml
+  /payments/templates/names:
+    $ref: ./paths/payments/templates/getTemplateNames.yaml
+  /payments/templates/validate:
+    $ref: ./paths/payments/templates/validateTemplate.yaml
 
   # References
-  /payment/reference:
-    $ref: ./paths/payment/reference/insertReferences.yaml # /template/references
-  /payment/reference/{id}:
-    $ref: ./paths/payment/reference/removeReference.yaml # /template/{templateId}/reference/{id}
-  /payment/reference/filter:
-    $ref: ./paths/payment/reference/filterReferences.yaml
+  /payments/references:
+    $ref: ./paths/payments/references/insertReferences.yaml # /template/references
+  /payments/references/{id}:
+    $ref: ./paths/payments/references/removeReference.yaml # /template/{templateId}/reference/{id}
+  /payments/references/filter:
+    $ref: ./paths/payments/references/filterReferences.yaml
 
   # Default references
-  /payment/reference/default:
-    $ref: ./paths/payment/reference/default/insertDefaultReference.yaml # /template/{id}/default
-  /payment/reference/default/{id}:
-    $ref: ./paths/payment/reference/default/removeDefaultReference.yaml # /template/{id}/default
-  /payment/reference/default/filter:
-    $ref: ./paths/payment/reference/default/filterDefaultReferences.yaml
+  /payments/references/default:
+    $ref: ./paths/payments/references/default/insertDefaultReference.yaml # /template/{id}/default
+  /payments/references/default/{id}:
+    $ref: ./paths/payments/references/default/removeDefaultReference.yaml # /template/{id}/default
+  /payments/references/default/filter:
+    $ref: ./paths/payments/references/default/filterDefaultReferences.yaml
 
   # Emulation
-  /payment/emulation:
-    $ref: ./paths/payment/emulation/getTemplatesFlow.yaml # /rules
+  /payments/emulations:
+    $ref: ./paths/payments/emulations/getTemplatesFlow.yaml # /rules
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
