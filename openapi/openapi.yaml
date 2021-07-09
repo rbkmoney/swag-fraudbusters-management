@@ -33,6 +33,8 @@ tags:
     x-displayName: Templates
   - name: reference
     x-displayName: References
+  - name: historical-data
+    x-displayName: Historical data
 paths:
   # Audit
   /audit/commandTypes:
@@ -102,23 +104,27 @@ paths:
 
   # References
   /payments/references:
-    $ref: ./paths/payments/references/insertReferences.yaml # /template/references
+    $ref: ./paths/payments/references/insertReferences.yaml
   /payments/references/{id}:
-    $ref: ./paths/payments/references/removeReference.yaml # /template/{templateId}/reference/{id}
+    $ref: ./paths/payments/references/removeReference.yaml
   /payments/references/filter:
     $ref: ./paths/payments/references/filterReferences.yaml
 
   # Default references
   /payments/references/default:
-    $ref: ./paths/payments/references/default/insertDefaultReference.yaml # /template/{id}/default
+    $ref: ./paths/payments/references/default/insertDefaultReference.yaml
   /payments/references/default/{id}:
-    $ref: ./paths/payments/references/default/removeDefaultReference.yaml # /template/{id}/default
+    $ref: ./paths/payments/references/default/removeDefaultReference.yaml
   /payments/references/default/filter:
     $ref: ./paths/payments/references/default/filterDefaultReferences.yaml
 
   # Emulation
   /payments/emulations:
-    $ref: ./paths/payments/emulations/getTemplatesFlow.yaml # /rules
+    $ref: ./paths/payments/emulations/getTemplatesFlow.yaml
+
+  # Historical data
+  /payments/historical-data/payments/filter:
+    $ref: ./paths/payments/historical-data/filterPayments.yaml
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'

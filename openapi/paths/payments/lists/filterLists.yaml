@@ -4,6 +4,7 @@ get:
   tags:
     - lists
   parameters:
+    - $ref: "../../../components/parameters/lastId.yaml"
     - $ref: "../../../components/parameters/sortOrder.yaml"
     - $ref: "../../../components/parameters/searchValue.yaml"
     - $ref: "../../../components/parameters/sortBy.yaml"

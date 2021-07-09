@@ -1,0 +1,8 @@
+type: object
+properties:
+  continuationId:
+    type: string
+  result:
+    type: array
+    items:
+      $ref: '../schemas/Payment.yaml'
