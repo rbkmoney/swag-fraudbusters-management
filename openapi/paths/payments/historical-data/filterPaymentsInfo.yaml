@@ -1,6 +1,6 @@
 get:
   summary: Поиск по истории платежей
-  operationId: filterPayments
+  operationId: filterPaymentsInfo
   tags:
     - historical-data
   parameters:

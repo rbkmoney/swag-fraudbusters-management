@@ -123,8 +123,8 @@ paths:
     $ref: ./paths/payments/emulations/getTemplatesFlow.yaml
 
   # Historical data
-  /payments/historical-data/payments:
-    $ref: ./paths/payments/historical-data/filterPayments.yaml
+  /payments/historical-data/payments-info:
+    $ref: ./paths/payments/historical-data/filterPaymentsInfo.yaml
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
