@@ -1,25 +1,27 @@
 get:
-  summary: Запросить список темплейтов
-  operationId: getTemplateNames
+  summary: Поиск группы
+  operationId: getGroup
   tags:
-    - template
+    - group
   parameters:
-    - name: regexpName
-      in: query
+    - name: id
+      required: true
+      in: path
       schema:
         type: string
 
   responses:
     '201':
-      description: Templates names
+      description: Group model
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/ListResponse.yaml'
+            $ref: '../../../components/schemas/Group.yaml'
     '401':
       description: Unauthorized
     '403':
       description: Forbidden
     '404':
       description: Not Found
+
 

@@ -1,22 +1,22 @@
 post:
-  summary: Добавление нового темплейта
-  operationId: insertTemplate
+  summary: Добавление новых привязок по умолчанию
+  operationId: insertDefaultReference
   tags:
-    - template
+    - reference
 
   requestBody:
     content:
       application/json:
         schema:
-          $ref: '../../components/schemas/Template.yaml'
+          $ref: '../../../../components/schemas/PaymentReference.yaml'
 
   responses:
     '201':
-      description: Created new template
+      description: Created new default references
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/CreateTemplateResponse.yaml'
+            type: string
 
     '401':
       description: Unauthorized

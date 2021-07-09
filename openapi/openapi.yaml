@@ -57,68 +57,68 @@ paths:
     $ref: ./paths/notification/channel/removeChannel.yaml
 
   # Load data
-  /load-data/fraud:
-    $ref: ./paths/load-data/loadFraudTransactions.yaml
+  /payment/load-data/fraud:
+    $ref: ./paths/payment/load-data/loadFraudTransactions.yaml
 
   # Groups
-  /group:
-    $ref: ./paths/group/insertGroup.yaml
-  /group/{groupId}:
-      $ref: ./paths/group/removeGroup.yaml
-  /group/filter:
-    $ref: ./paths/group/filterGroups.yaml
-  /group/{id}:
-    $ref: ./paths/group/getGroup.yaml
+  /payment/group:
+    $ref: ./paths/payment/group/insertGroup.yaml
+  /payment/group/{groupId}:
+      $ref: ./paths/payment/group/removeGroup.yaml
+  /payment/group/filter:
+    $ref: ./paths/payment/group/filterGroups.yaml
+  /payment/group/{id}:
+    $ref: ./paths/payment/group/getGroup.yaml
 
   # Groups reference
-  /group/{id}/reference:
-    $ref: ./paths/group/reference/insertGroupReferences.yaml
-  /group/{id}/reference/remove:
-    $ref: ./paths/group/reference/removeGroupReference.yaml
-  /group/reference/filter:
-    $ref: ./paths/group/reference/filterGroupsReferences.yaml
+  /payment/group/{id}/reference:
+    $ref: ./paths/payment/group/reference/insertGroupReferences.yaml
+  /payment/group/{id}/reference/remove:
+    $ref: ./paths/payment/group/reference/removeGroupReference.yaml
+  /payment/group/reference/filter:
+    $ref: ./paths/payment/group/reference/filterGroupsReferences.yaml
 
   # Lists
-  /lists:
-    $ref: ./paths/lists/insertRow.yaml
-  /lists/{id}:
-    $ref: ./paths/lists/removeRow.yaml
-  /lists/availableListNames:
-    $ref: ./paths/lists/getAvailableListNames.yaml
-  /lists/filter:
-    $ref: ./paths/lists/filterLists.yaml
+  /payment/lists:
+    $ref: ./paths/payment/lists/insertRow.yaml
+  /payment/lists/{id}:
+    $ref: ./paths/payment/lists/removeRow.yaml
+  /payment/lists/availableListNames:
+    $ref: ./paths/payment/lists/getAvailableListNames.yaml
+  /payment/lists/filter:
+    $ref: ./paths/payment/lists/filterLists.yaml
 
   # Templates
-  /template:
-    $ref: ./paths/template/insertTemplate.yaml
-  /template/{id}:
-    $ref: ./paths/template/removeTemplate.yaml
-  /template/filter:
-    $ref: ./paths/template/filterTemplates.yaml
-  /template/names:
-    $ref: ./paths/template/getTemplateNames.yaml
-  /template/validate:
-    $ref: ./paths/template/validateTemplate.yaml
+  /payment/template:
+    $ref: ./paths/payment/template/insertTemplate.yaml
+  /payment/template/{id}:
+    $ref: ./paths/payment/template/removeTemplate.yaml
+  /payment/template/filter:
+    $ref: ./paths/payment/template/filterTemplates.yaml
+  /payment/template/names:
+    $ref: ./paths/payment/template/getTemplateNames.yaml
+  /payment/template/validate:
+    $ref: ./paths/payment/template/validateTemplate.yaml
 
   # References
-  /reference:
-    $ref: ./paths/reference/insertReferences.yaml # /template/references
-  /reference/{id}:
-    $ref: ./paths/reference/removeReference.yaml # /template/{templateId}/reference/{id}
-  /reference/filter:
-    $ref: ./paths/reference/filterReferences.yaml
+  /payment/reference:
+    $ref: ./paths/payment/reference/insertReferences.yaml # /template/references
+  /payment/reference/{id}:
+    $ref: ./paths/payment/reference/removeReference.yaml # /template/{templateId}/reference/{id}
+  /payment/reference/filter:
+    $ref: ./paths/payment/reference/filterReferences.yaml
 
   # Default references
-  /reference/default:
-    $ref: ./paths/reference/default/insertDefaultReference.yaml # /template/{id}/default
-  /reference/default/{id}:
-    $ref: ./paths/reference/default/removeDefaultReference.yaml # /template/{id}/default
-  /reference/default/filter:
-    $ref: ./paths/reference/default/filterDefaultReferences.yaml
+  /payment/reference/default:
+    $ref: ./paths/payment/reference/default/insertDefaultReference.yaml # /template/{id}/default
+  /payment/reference/default/{id}:
+    $ref: ./paths/payment/reference/default/removeDefaultReference.yaml # /template/{id}/default
+  /payment/reference/default/filter:
+    $ref: ./paths/payment/reference/default/filterDefaultReferences.yaml
 
   # Emulation
-  /emulation:
-    $ref: ./paths/emulation/getTemplatesFlow.yaml # /rules
+  /payment/emulation:
+    $ref: ./paths/payment/emulation/getTemplatesFlow.yaml # /rules
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
