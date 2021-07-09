@@ -10,37 +10,56 @@ get:
     - $ref: "../../../components/parameters/sortBy.yaml"
     - $ref: "../../../components/parameters/sortFieldValue.yaml"
     - $ref: "../../../components/parameters/size.yaml"
+
     - name: partyId
       required: false
       in: query
+      schema:
+        type: string
     - name: shopId
       required: false
       in: query
+      schema:
+        type: string
     - name: paymentId
       required: false
       in: query
+      schema:
+        type: string
     - name: status
       required: false
       in: query
+      schema:
+        type: string
     - name: email
       required: false
       in: query
+      schema:
+        type: string
     - name: providerCountry
       required: false
       in: query
+      schema:
+        type: string
     - name: cardToken
       required: false
       in: query
+      schema:
+        type: string
     - name: fingerprint
       required: false
       in: query
+      schema:
+        type: string
     - name: terminal
       required: false
       in: query
+      schema:
+        type: string
 
   responses:
     '201':
-      description: Groups models
+      description: Payments
       content:
         application/json:
           schema:
