@@ -83,12 +83,14 @@ paths:
   # Lists
   /payments-lists:
     $ref: ./paths/payments/lists/insertRow.yaml
-  /payments-lists/{listType}:
+  /payments-lists/csv:
     $ref: ./paths/payments/lists/insertFromCsv.yaml
   /payments-lists/{id}:
     $ref: ./paths/payments/lists/removeRow.yaml
   /payments-lists/availableListNames:
     $ref: ./paths/payments/lists/getAvailableListNames.yaml
+  /payments-lists/currentListNames:
+    $ref: ./paths/payments/lists/getCurrentListNames.yaml
   /payments-lists/filter:
     $ref: ./paths/payments/lists/filterLists.yaml
 

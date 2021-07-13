@@ -3,12 +3,6 @@ post:
   operationId: insertFromCsv
   tags:
     - lists
-  parameters:
-    - name: listType
-      required: true
-      in: path
-      schema:
-        type: string
 
   requestBody:
     content:
@@ -16,6 +10,8 @@ post:
         schema:
           type: object
           properties:
+            listType:
+              type: string
             file:
               type: string
               format: binary
