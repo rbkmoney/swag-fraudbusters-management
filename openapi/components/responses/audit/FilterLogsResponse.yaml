@@ -5,6 +5,7 @@ required:
 properties:
   count:
     type: integer
+    format: int32
   result:
     type: array
     items:

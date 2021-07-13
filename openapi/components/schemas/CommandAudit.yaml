@@ -7,6 +7,7 @@ properties:
     - DELETE
   id:
     type: integer
+    format: int64
   initiator:
     type: string
   insertTime:
