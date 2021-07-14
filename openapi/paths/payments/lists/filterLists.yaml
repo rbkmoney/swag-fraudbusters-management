@@ -32,7 +32,7 @@ get:
 
   responses:
     '201':
-      description: Groups models
+      description: WbList record models
       content:
         application/json:
           schema:
