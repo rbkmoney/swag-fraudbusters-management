@@ -3,6 +3,12 @@ get:
   operationId: getCurrentListNames
   tags:
     - lists
+  parameters:
+    - name: listType
+      required: true
+      in: query
+      schema:
+        type: string
 
   responses:
     '201':
