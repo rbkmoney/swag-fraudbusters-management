@@ -2,8 +2,5 @@ type: object
 required:
   - result
 properties:
-  count:
-    type: integer
-    format: int32
   result:
     $ref: '../schemas/ArrayResult.yaml'
