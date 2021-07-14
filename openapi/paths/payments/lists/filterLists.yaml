@@ -32,11 +32,11 @@ get:
 
   responses:
     '201':
-      description: Groups models
+      description: WbList record models
       content:
         application/json:
           schema:
-            $ref: '../../../components/responses/GroupsResponse.yaml'
+            $ref: '../../../components/responses/WbListRecordsResponse.yaml'
     '401':
       description: Unauthorized
     '403':
