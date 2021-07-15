@@ -1,4 +1,6 @@
 type: object
+required:
+  - result
 properties:
   continuationId:
     type: string

@@ -1,4 +1,6 @@
 type: object
+required:
+  - validateResults
 properties:
   validateResults:
     type: array
