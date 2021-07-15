@@ -1,4 +1,7 @@
 type: object
+required:
+  - result
+  - count
 properties:
   count:
     type: integer
