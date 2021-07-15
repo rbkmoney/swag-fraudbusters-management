@@ -161,6 +161,12 @@
                                     </configOptions>
                                     <apiPackage>${default.package}.api</apiPackage>
                                     <modelPackage>${default.package}.model</modelPackage>
+                                    <typeMappings>
+                                        <typeMapping>OffsetDateTime=LocalDateTime</typeMapping>
+                                    </typeMappings>
+                                    <importMappings>
+                                        <importMapping>java.time.OffsetDateTime=java.time.LocalDateTime</importMapping>
+                                    </importMappings>
                                 </configuration>
                             </execution>
                         </executions>
