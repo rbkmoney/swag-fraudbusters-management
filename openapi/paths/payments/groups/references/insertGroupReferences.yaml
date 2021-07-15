@@ -14,9 +14,7 @@ post:
     content:
       application/json:
         schema:
-          type: array
-          items:
-            $ref: '../../../../components/schemas/GroupReference.yaml'
+          $ref: '../../../../components/responses/ListResponse.yaml'
 
   responses:
     '201':
