@@ -128,7 +128,7 @@ paths:
 
   # Historical data
   /payments-historical-data/payments-info:
-    $ref: ./paths/payments/historical-data/filterPaymentsInfo.yaml
+    $ref: ./paths/payments/historical-data/filterPayments.yaml
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'

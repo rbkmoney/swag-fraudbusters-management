@@ -22,6 +22,12 @@ properties:
       - processed
       - captured
       - failed
+  payerType:
+    type: string
+  mobile:
+    type: boolean
+  recurrent:
+    type: boolean
   error:
     $ref: './Error.yaml'
   paymentSystem:

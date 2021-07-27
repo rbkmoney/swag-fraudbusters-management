@@ -1,6 +1,6 @@
 get:
   summary: Поиск по истории платежей
-  operationId: filterPaymentsInfo
+  operationId: filterPayments
   tags:
     - historical-data
   parameters:
@@ -53,6 +53,26 @@ get:
         type: string
     - name: terminal
       required: false
+      in: query
+      schema:
+        type: string
+    - name: invoiceId
+      required: false
+      in: query
+      schema:
+        type: string
+    - name: maskedPan
+      required: false
+      in: query
+      schema:
+        type: string
+    - name: from
+      required: true
+      in: query
+      schema:
+        type: string
+    - name: to
+      required: true
       in: query
       schema:
         type: string
