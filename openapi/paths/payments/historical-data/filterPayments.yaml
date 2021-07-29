@@ -4,11 +4,9 @@ get:
   tags:
     - historical-data
   parameters:
-    - $ref: "../../../components/parameters/lastId.yaml"
+    - $ref: "../../../components/parameters/continuationId.yaml"
     - $ref: "../../../components/parameters/sortOrder.yaml"
-    - $ref: "../../../components/parameters/searchValue.yaml"
     - $ref: "../../../components/parameters/sortBy.yaml"
-    - $ref: "../../../components/parameters/sortFieldValue.yaml"
     - $ref: "../../../components/parameters/size.yaml"
 
     - name: partyId
