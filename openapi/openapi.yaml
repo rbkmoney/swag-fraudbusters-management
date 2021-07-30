@@ -129,6 +129,14 @@ paths:
   # Historical data
   /payments-historical-data/payments-info:
     $ref: ./paths/payments/historical-data/filterPayments.yaml
+  /payments-historical-data/fraud-results:
+    $ref: ./paths/payments/historical-data/filterInspectResults.yaml
+  /payments-historical-data/chargebacks:
+    $ref: ./paths/payments/historical-data/filterChargebacks.yaml
+  /payments-historical-data/fraud-payments:
+    $ref: ./paths/payments/historical-data/filterFraudPayments.yaml
+  /payments-historical-data/filter-refunds:
+    $ref: ./paths/payments/historical-data/filterRefunds.yaml
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'

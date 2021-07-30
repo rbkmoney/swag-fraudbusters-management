@@ -1,6 +1,6 @@
 get:
-  summary: Поиск по истории платежей
-  operationId: filterPayments
+  summary: Поиск по истории возвратов
+  operationId: filterRefunds
   tags:
     - historical-data
   parameters:
@@ -81,7 +81,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../../components/responses/PaymentsResponse.yaml'
+            $ref: '../../../components/responses/RefundsResponse.yaml'
     '401':
       description: Unauthorized
     '403':
