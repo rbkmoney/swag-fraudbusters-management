@@ -1,6 +1,6 @@
 get:
   summary: Поиск по истории результатов срабатывания антифрода
-  operationId: filterFraudResults
+  operationId: filterInspectResults
   tags:
     - historical-data
   parameters:
