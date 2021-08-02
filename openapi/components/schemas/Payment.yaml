@@ -18,6 +18,13 @@ properties:
     $ref: './ClientInfo.yaml'
   status:
     type: string
+    enum:
+      - pending
+      - processed
+      - captured
+      - cancelled
+      - failed
+      - unknown
   payerType:
     type: string
   mobile:
