@@ -4,6 +4,11 @@ get:
   tags:
     - data-sets
   parameters:
+    - $ref: "../../../components/parameters/continuationId.yaml"
+    - $ref: "../../../components/parameters/sortOrder.yaml"
+    - $ref: "../../../components/parameters/sortBy.yaml"
+    - $ref: "../../../components/parameters/size.yaml"
+
     - name: from
       required: false
       in: query
