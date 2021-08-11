@@ -138,6 +138,18 @@ paths:
   /payments-historical-data/refunds:
     $ref: ./paths/payments/historical-data/filterRefunds.yaml
 
+  # Data sets
+  /payments-data-set/data-sets:
+    $ref: ./paths/payments/data-sets/insertDataSet.yaml
+  /payments-data-set/data-sets/{id}:
+    $ref: ./paths/payments/data-sets/removeDataSet.yaml
+  /payments-data-set/data-sets/filter:
+    $ref: ./paths/payments/data-sets/filterDataSets.yaml
+  /payments-data-set/data-sets/applyRuleOnHistoricalDataSet:
+    $ref: ./paths/payments/data-sets/applyRuleOnHistoricalDataSet.yaml
+  /payments-data-set/data-sets/{setId}:
+    $ref: ./paths/payments/data-sets/getDataSet.yaml
+
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
 
