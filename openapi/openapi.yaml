@@ -19,6 +19,8 @@ tags:
     x-displayName: Audit
   - name: notification
     x-displayName: Notifications
+  - name: channel
+    x-displayName: Channels
   - name: group
     x-displayName: Groups
   - name: group-reference
@@ -54,9 +56,9 @@ paths:
 
   # Notifications channel
   /notifications/channels:
-    $ref: ./paths/notifications/channels/createChannel.yaml
+    $ref: ./paths/notifications/channels.yaml
   /notifications/channels/{name}:
-    $ref: ./paths/notifications/channels/removeChannel.yaml
+    $ref: ./paths/notifications/channel.yaml
 
   # Load data
   /payments-load-data/fraud-payments:
