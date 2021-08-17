@@ -48,13 +48,15 @@ paths:
 
   # Notifications
   /notifications:
-    $ref: ./paths/notifications/createOrUpdateNotification.yaml
+    $ref: ./paths/notifications/notifications.yaml
   /notifications/{name}:
-    $ref: ./paths/notifications/removeNotification.yaml
-  /notifications/validate:
-    $ref: ./paths/notifications/validateNotification.yaml
+    $ref: ./paths/notifications/notification.yaml
+  /notifications/validating:
+    $ref: ./paths/notifications/validating.yaml
+  /notifications/{name}/statuses:
+    $ref: ./paths/notifications/statuses.yaml
 
-  # Notifications channel
+  # Notifications channels
   /notifications/channels:
     $ref: ./paths/notifications/channels.yaml
   /notifications/channels/{name}:
