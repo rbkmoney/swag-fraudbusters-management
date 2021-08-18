@@ -3,4 +3,4 @@ in: path
 description: Название нотификации
 required: true
 schema:
-  $ref: '../schemas/NotificationName.yaml'
+  type: string

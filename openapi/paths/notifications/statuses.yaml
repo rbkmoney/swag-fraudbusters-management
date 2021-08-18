@@ -1,4 +1,4 @@
-patch:
+put:
   summary: Изменение статуса нотификации
   operationId: updateNotificationStatus
   tags:
