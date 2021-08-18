@@ -4,17 +4,10 @@ delete:
   tags:
     - notification
   parameters:
-    - name: name
-      in: path
-      required: true
-      schema:
-        type: string
-
+    - $ref: '../../components/parameters/notificationName.yaml'
   responses:
-    '200':
-      description: Removed notification
     '204':
-      description: No Content
+      description: Notification was removed
     '401':
       description: Unauthorized
     '403':

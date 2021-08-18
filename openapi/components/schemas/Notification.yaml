@@ -1,19 +1,15 @@
 type: object
 properties:
-  alertchanel:
+  channel:
     type: string
   createdAt:
     type: string
     format: date-time
   frequency:
     type: string
-  groupbyparams:
-    type: string
   name:
     type: string
   period:
-    type: string
-  queryText:
     type: string
   status:
     type: string
@@ -23,9 +19,7 @@ properties:
       - ARCHIVE
   subject:
     type: string
-  templateType:
-    type: string
-  templateValue:
+  type:
     type: string
   updatedAt:
     type: string

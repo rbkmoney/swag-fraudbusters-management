@@ -12,7 +12,7 @@ post:
 
   responses:
     '201':
-      description: Created row in list
+      description: Validation result
       content:
         application/json:
           schema:

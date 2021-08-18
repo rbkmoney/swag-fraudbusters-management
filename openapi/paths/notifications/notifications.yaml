@@ -1,3 +1,25 @@
+get:
+  summary: Получение списка нотификаций
+  operationId: getNotifications
+  tags:
+    - notification
+
+  responses:
+    '200':
+      description: Notifications list
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/responses/NotificationListResponse.yaml'
+
+    '401':
+      description: Unauthorized
+    '403':
+      description: Forbidden
+    '404':
+      description: Not Found
+
+
 post:
   summary: Создание нотификации
   operationId: createOrUpdateNotification
@@ -12,7 +34,7 @@ post:
 
   responses:
     '201':
-      description: Created row in list
+      description: Created notification
       content:
         application/json:
           schema:

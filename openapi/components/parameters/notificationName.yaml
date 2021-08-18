@@ -1,0 +1,6 @@
+name: notificationName
+in: path
+description: Название нотификации
+required: true
+schema:
+  type: string
