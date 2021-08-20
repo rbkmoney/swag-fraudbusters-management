@@ -14,6 +14,10 @@ properties:
     type: string
   cardToken:
     type: string
+  bin:
+    type: string
+  lastDigits:
+    type: string
   clientInfo:
     $ref: './ClientInfo.yaml'
   status:
