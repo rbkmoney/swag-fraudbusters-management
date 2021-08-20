@@ -3,6 +3,9 @@ required:
   - records
   - template
 properties:
+  dataSetId:
+    type: integer
+    format: int64
   records:
     type: array
     items:
