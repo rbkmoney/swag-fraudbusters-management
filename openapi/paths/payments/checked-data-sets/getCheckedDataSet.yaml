@@ -1,6 +1,6 @@
 get:
   summary: Получить конкретный набор данных с последними результатами тестирования
-  operationId: getDataSet
+  operationId: getCheckedDataSet
   tags:
     - data-sets
   parameters:

@@ -152,7 +152,7 @@ paths:
 
   # Checked data sets
   /payments-data-set/checked-data-sets/{id}:
-    $ref: ./paths/payments/checked-data-sets/getDataSet.yaml
+    $ref: ./paths/payments/checked-data-sets/getCheckedDataSet.yaml
 
 servers:
   - url: 'https://fb-management:8080/fb-management/v1'
