@@ -4,7 +4,7 @@ delete:
   tags:
     - notification
   parameters:
-    - $ref: '../../components/parameters/notificationName.yaml'
+    - $ref: '../../components/parameters/notificationId.yaml'
   responses:
     '204':
       description: Notification was removed

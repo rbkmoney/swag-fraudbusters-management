@@ -4,7 +4,7 @@ put:
   tags:
     - notification
   parameters:
-    - $ref: '../../components/parameters/notificationName.yaml'
+    - $ref: '../../components/parameters/notificationId.yaml'
   requestBody:
     content:
       application/json:
