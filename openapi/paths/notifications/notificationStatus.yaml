@@ -12,13 +12,8 @@ put:
           $ref: '../../components/schemas/NotificationStatus.yaml'
 
   responses:
-    '201':
-      description: Updated status
-      content:
-        application/json:
-          schema:
-            $ref: '../../components/schemas/NotificationStatus.yaml'
-
+    '204':
+      description: Status was updated
     '401':
       description: Unauthorized
     '403':
