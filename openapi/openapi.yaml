@@ -52,9 +52,9 @@ paths:
   /notifications/{name}:
     $ref: ./paths/notifications/notification.yaml
   /notifications/validating:
-    $ref: ./paths/notifications/validating.yaml
-  /notifications/{name}/statuses:
-    $ref: ./paths/notifications/statuses.yaml
+    $ref: ./paths/notifications/validation.yaml
+  /notifications/{name}/status:
+    $ref: ./paths/notifications/notificationStatus.yaml
 
   # Notifications channels
   /notifications/channels:
