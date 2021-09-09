@@ -22,8 +22,9 @@ properties:
       - ARCHIVE
   subject:
     type: string
-  type:
-    type: string
+  templateId:
+    type: integer
+    format: int64
   updatedAt:
     type: string
     format: date-time
