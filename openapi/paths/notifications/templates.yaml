@@ -10,7 +10,7 @@ get:
       content:
         application/json:
           schema:
-            $ref: '../../components/responses/NotificationListResponse.yaml'
+            $ref: '../../components/responses/NotificationTemplateListResponse.yaml'
 
     '401':
       description: Unauthorized
