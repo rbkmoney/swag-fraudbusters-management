@@ -1,16 +1,11 @@
 type: object
 properties:
-  count:
-    type: integer
-    format: int64
   createdAt:
     type: string
     format: date-time
   destination:
     type: string
   name:
-    type: string
-  subject:
     type: string
   type:
     type: string
