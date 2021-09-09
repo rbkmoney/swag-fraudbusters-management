@@ -49,11 +49,11 @@ paths:
   # Notifications
   /notifications:
     $ref: ./paths/notifications/notifications.yaml
-  /notifications/{name}:
+  /notifications/{id}:
     $ref: ./paths/notifications/notification.yaml
   /notifications/validation:
     $ref: ./paths/notifications/validation.yaml
-  /notifications/{name}/status:
+  /notifications/{id}/status:
     $ref: ./paths/notifications/notificationStatus.yaml
 
   # Notifications channels
@@ -61,6 +61,12 @@ paths:
     $ref: ./paths/notifications/channels.yaml
   /notifications/channels/{name}:
     $ref: ./paths/notifications/channel.yaml
+  /notifications/channels/types:
+    $ref: ./paths/notifications/channelTypes.yaml
+
+  # Notifications templates
+  /notifications/templates:
+    $ref: ./paths/notifications/templates.yaml
 
   # Load data
   /payments-load-data/fraud-payments:

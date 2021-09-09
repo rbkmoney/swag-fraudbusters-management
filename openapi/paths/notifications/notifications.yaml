@@ -3,6 +3,10 @@ get:
   operationId: getNotifications
   tags:
     - notification
+  parameters:
+    - $ref: "../../components/parameters/numericLastId.yaml"
+    - $ref: "../../components/parameters/size.yaml"
+    - $ref: "../../components/parameters/searchValue.yaml"
 
   responses:
     '200':

@@ -1,4 +1,4 @@
-name: notificationId
+name: id
 in: path
 description: Идентификатор нотификации
 required: true
