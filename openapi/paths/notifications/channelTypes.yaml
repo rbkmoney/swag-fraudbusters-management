@@ -18,3 +18,5 @@ get:
       description: Forbidden
     '404':
       description: Not Found
+    '502':
+      description: Error call notificator
