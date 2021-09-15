@@ -2,6 +2,9 @@ type: object
 required:
   - result
 properties:
+  continuationId:
+    type: integer
+    format: int64
   result:
     type: array
     items:
