@@ -4,7 +4,7 @@ get:
   tags:
     - channel
   parameters:
-    - $ref: "../../components/parameters/numericLastId.yaml"
+    - $ref: "../../components/parameters/lastId.yaml"
     - $ref: "../../components/parameters/size.yaml"
     - $ref: "../../components/parameters/searchValue.yaml"
 
